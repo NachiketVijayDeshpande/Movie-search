@@ -6,6 +6,7 @@ const searchButton =document.getElementById('Search-Button')
 const searchValue =document.getElementById('search-value')
 const wathlistButton =document.getElementById('wathlist-button')
 const addedpopup =document.getElementById('popup-section')
+const removepopupSection = document.getElementById('removepopup-section')
 let render =[]
 let imdb 
 
@@ -18,6 +19,7 @@ document.addEventListener('click',function(e){
    if(e.target.dataset.remove){
     removeWatchlistItem(e.target.dataset.remove)
     renderwatchlist()
+    removePopup()
    }
    
 })
@@ -25,7 +27,8 @@ wathlistButton.addEventListener('click', renderwatchlist)
 
 
 function removeWatchlistItem(id){
-    document.getElementById('removepopup-section').style.display ='block'
+
+
      renderSection.innerHTML =''
     const storedArray = JSON.parse(localStorage.getItem('Movies'))
 const index = storedArray.indexOf(id)
@@ -187,5 +190,18 @@ function addedBtn(){
         setTimeout(() => {
   addedpopup.style.display ='none'
 }, 1500);
+
+}
+
+
+function removePopup(){
+    setTimeout(() => {
+        removepopupSection.style.display ='block'
+}, 200);
+
+    
+        setTimeout(() => {
+            removepopupSection.style.display ='none'
+}, 1000);
 
 }
