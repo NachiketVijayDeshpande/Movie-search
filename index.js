@@ -105,7 +105,7 @@ function renderOnscreen(data){
                                                     <p>${data.Runtime}</p>
                                                     <p>${data.Genre}</p>
                                                     
-                                                    <p><i class="fa-solid fa-circle-plus" data-movieid="${data.imdbID}"></i>      Watchlist</p>
+                                                    <p id="action-button"><i class="fa-solid fa-circle-plus" data-movieid="${data.imdbID}"></i>      Watchlist</p>
                                                 </div>
                                                 <p id="movie-plot">${data.Plot}</p>
                                                 </div>
@@ -141,8 +141,7 @@ function searchMovie(value){
 
 
 function renderwatchlist(){
-   
-        document.getElementById('popup-section').style.display ='none'
+        
 
     renderSection.innerHTML =''
     const list = JSON.parse(localStorage.getItem('Movies')).map(function(each){
@@ -163,7 +162,7 @@ renderSection.innerHTML +=  `<div id="styling-render">
                                                     <p>${data.Runtime}</p>
                                                     <p>${data.Genre}</p>
                                                     
-                                                    <p>
+                                                    <p id="action-button">
                                                     <i class="fa-solid fa-circle-minus" data-remove="${data.imdbID}"></i> Remove</p>
                                                 </div>
                                                 <p id="movie-plot">${data.Plot}</p>
@@ -197,7 +196,7 @@ function addedBtn(){
 function removePopup(){
     setTimeout(() => {
         removepopupSection.style.display ='block'
-}, 200);
+}, 100);
 
     
         setTimeout(() => {
@@ -205,3 +204,5 @@ function removePopup(){
 }, 1000);
 
 }
+
+

@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", sans-serif;
     background: #27292c;
     color: white;
     text-align: center;
@@ -11,7 +11,13 @@ h1 {
     margin-top: 40px;
 }
 
+header i{
+    margin-right: 10px;
+    font-size: 50px;
+}
+
 header{
+    
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -29,6 +35,7 @@ header p{
     padding: 0;
     font-size: 60px;
     font-weight: bold;
+    color: #C5C5C5;
 }
 
 header button{
@@ -36,6 +43,8 @@ header button{
     background: none;
     color: white;
     font-size: 40px;
+    color: #C5C5C5;
+    cursor: pointer;
 }
 
 #Search-bar{
@@ -43,6 +52,7 @@ font-size: 24px;
 display: flex;
 justify-content: center;
 align-items: center;
+
 
 }
 #Search-bar input{
@@ -53,6 +63,10 @@ align-items: center;
     border-bottom-left-radius: 15px ; 
     border: none;
     font-weight: bolder;
+    background-color:white;
+    color: #27292c;
+    cursor: pointer;
+    font-size: 25px;
 }
 
 #Search-bar button{
@@ -62,6 +76,9 @@ align-items: center;
     border-bottom-right-radius: 15px ; 
     border: none;
     background-color: F9FAFB;
+    background-color: #979797;
+    color: whitesmoke;
+    cursor: pointer;
 }
 
 
@@ -103,12 +120,13 @@ main{
     margin-left: 30px;
     font-size: 20px;
     color: #808080;
-     
+    font-family: "Inter", sans-serif;
 }
 
 #movie-title{
     font-size: 30px;
     margin-top: 5px;
+    font-family: "Inter", sans-serif;
 
 }
 
@@ -123,8 +141,10 @@ main{
     display: flex;
     align-items: center;
     margin-left: 30px;
-    font-size: 15px;
+    font-size: 20px;
     justify-content: space-between;
+    font-family: "Inter", sans-serif;
+
     
     
     
@@ -133,11 +153,12 @@ main{
 #poster-image{
     margin-bottom: 30px;
     height: 300px;
-    max-width: 250px;
+    max-width: 220px;
 
 }
 #movie-details i{
-font-size: 35px;
+font-size: 40px;
+
 }
 #popup-section{
     font-size: 20px;
@@ -164,9 +185,24 @@ font-size: 35px;
     position: fixed;    
     top: 40%;
     left: 38%;
-   
     text-align: center;
     max-height: 50px;
     display: none;  
     
 }
+
+#styling-render i{
+    font-size: 40px;
+    cursor: pointer;
+    margin-right:5px ;
+    
+}
+#action-button{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bolder;
+
+}
+
+
